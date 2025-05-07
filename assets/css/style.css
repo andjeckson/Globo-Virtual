@@ -1,1 +1,233 @@
+@font-face {
+  font-family: 'Belgiano';
+  src: url('../fonts/Belgiano-Serif.otf');
+}
+  
 
+.abertura{
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 20px;
+ color: #eee;
+ background: #000000;
+ z-index: 1000;
+ -webkit-animation: FadeOut .5s ease-in-out;
+ -o-animation: FadeOut .5s ease-in-out;
+ animation: FadeOut .5s ease-in-out;
+ -webkit-animation-delay: 1.55s;
+ -moz-animation-delay: 1.55s;
+ -o-animation-delay: 1.55s;
+ animation-delay: 1.55s;
+}
+
+@-webkit-keyframes FadeOut {
+ from { opacity: 1; }
+ to { opacity: 0; }
+}
+@-o-keyframes FadeOut {
+ from { opacity: 1; }
+ to { opacity: 0; }
+}
+@-moz-keyframes FadeOut {
+ from { opacity: 1; }
+ to { opacity: 0; }
+}
+@keyframes FadeOut {
+ from { opacity: 1; }
+ to { opacity: 0; }
+}
+
+.abertura .nome-do-app{
+  font-size: 1.2rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Belgiano', serif;
+}
+
+.abertura .logo{
+ height: 80px;
+ width: 80px;
+ -webkit-border-radius: 1rem;
+ -moz-border-radius: 1rem;
+ border-radius: 1rem;
+}
+
+.abertura .desenvolvedor{
+ position: absolute;
+ width: 250px;
+ bottom: 30px;
+ text-transform: uppercase;
+ font-size: .85rem;
+ text-align: center;
+ left: auto;
+}
+.abertura *{
+ animation: FadeOut 1s linear reverse;
+}
+
+
+*{
+  margin: 0;
+  left: 0;
+}
+
+
+body{
+  background: #000;
+}
+
+.app{
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 30px;
+  font-family: belgiano;
+}
+
+
+.globo{
+    width: 180px;
+    height: 180px;
+    border-radius: 60%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    border: 2px #2537FF solid;
+    box-shadow: 0 0 50px #2537FF;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.globo .pedra-sorteada{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: inherit;
+  color: #2537FF45;
+  -webkit-text-stroke: 2px #2537ff;
+  text-shadow: 0 5px 20px #2537FF;
+  height: 102%;
+  width: 102%;
+  font-size: 5.5rem;
+  position: absolute;
+  z-index: 100;
+  -webkit-border-radius: 60%;
+  -moz-border-radius: 60%;
+  border-radius: 60%;
+  opacity: 0;
+  font-family: 'Belgiano', 'Times New Roman', Times, serif;
+
+}
+
+.globo .pedra-sorteada.mostrar{
+  opacity: 1;
+  transition: .3s ease-in;
+}
+
+.globo .pedra-sorteada .letra{
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   top: -2.2rem;
+   font-size: 2rem;
+   width: 3rem;
+   height: 3rem;
+   -webkit-border-radius: 60%;
+   border-radius: 60%;
+   border: 2px #2537ff solid;
+   margin: 0;
+}
+
+.globo .pedra-sorteada .numero{
+  margin: 0;
+  display: inline-block;
+}
+
+.globo .loader{
+   position: absolute;
+   width: 130px;
+   height: 130px;
+   top: auto;
+   left: auto;
+   -webkit-border-radius: 60%;
+   -moz-border-radius: 60%;
+   border-radius: 60%;
+   border: 20px solid #2537ff;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-left-color: transparent;
+   opacity: 0;
+}
+
+
+.globo.girar .loader{
+    animation: girar 1.5s linear 
+}
+
+@keyframes girar{
+  from{
+    transform: rotate(0) /*scale(1)*/;
+    border-width: 1px;
+    opacity: 0;
+  }to{
+    transform: rotate(360deg) /*scale(15)*/;
+    opacity: 1;
+  }
+}
+
+
+  
+table{
+   width: max-content;
+   padding: 15px;
+   border-radius: 1rem;
+   border-collapse: separate;
+   border-spacing: 10px;
+}
+
+
+
+table th{
+  width: 40px;
+  height: 40px;
+  background: #1B248E;
+  color: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+table td{
+  width: 50px;
+  height: 30px;
+  background: #222;
+  text-align: center;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  color: #777;
+}
+
+table td.sorteada{
+    box-shadow: 0 0 50px #2537FF;
+    background: #2537FF;
+    color: #aaa;
+}

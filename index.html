@@ -13,26 +13,37 @@
   <script src="assets/js/main.js" defer></script> 
 </head>
 <body>
-  
-   <section class="abertura">
-    <img src="assets/img/logo.webp" alt="Logo" class="logo">
-    <h4 class="nome-do-app">Globo Virtual</h4>
-    <img src="assets/img/Andjeckson-logo.webp"
-         alt="Imagem com o texto Andjeckson Developer, com logo de um leão azul posicionado na esquerda" class="desenvolvedor">
+    
+ <section class="abertura">
+    <img src="assets/img/logo.webp" alt="" class="logo">
+    <img src="assets/img/Andjeckson-logo.webp" alt="" class="desenvolvedor" width="200px">
  </section>
- 
-  <section class="app">
-       <div class="globo">
-            <div class="pedra-sorteada">
-                <p class="letra"></p>
-                <p class="numero"></p>
-            </div>
-            <div class="loader">
-            </div>
-       </div>
-       <div class="cedulas">
-            <!-- As cédulas ficarão aqui -->
-       </div>
-  </section>
+  
+  <header class="app-bar">
+      <p>Globo Virtual</p>
+       <label>
+           <span>Síntese de voz</span>
+           <input type="checkbox" name="" id="" />  
+      </label>
+  </header>
+  
+<div class="app">
+    <section class="globo" id="globo">
+          <div class="pedra-sorteada" id="pedra-sorteada">
+              <div class="circulo">  
+                  <p class="letra">?</p>
+                  <p class="numero">??</p>
+              </div>
+          </div>
+    </section>
+      <button class="btn-sortear" id="btn-sortear">SORTEAR</button>
+  
+      <section class="numeros-sorteados">
+            <table class="pedras" id="tabela-de-numeros">
+                  
+            </table>
+     </section>
+  </div>
+  
 </body>
 </html>

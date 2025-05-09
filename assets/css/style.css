@@ -118,13 +118,13 @@ body{
 }
 
 .app{
-  margin-top: 70px;
+  margin: 70px auto 0 auto;
   padding: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  
+  max-width: 980px;
 }
 
 
@@ -336,8 +336,11 @@ body{
 }
 
 .numeros-sorteados{
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  width: 100%;
   margin-top: 100px;
 }
 

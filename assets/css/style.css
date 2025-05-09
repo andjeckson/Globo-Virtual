@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'HarmonyOS';
-  src: url('/assets/fonts/HarmonyOS_Sans_Black.ttf');
+  src: url('../fonts/HarmonyOS_Sans_Black.ttf');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'HarmonyOS';
-  src: url('/assets/fonts/HarmonyOS_Sans_Regular.ttf');
+  src: url('../fonts/HarmonyOS_Sans_Regular.ttf');
   font-weight: 300;
 }
 
@@ -230,6 +230,14 @@ body{
   border: 8px var(--cor) solid;
 }
 
+.globo{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
 .globo.girar .pedra-sorteada{
   background: #000;
   --cor: #000
@@ -366,10 +374,15 @@ body{
 }
 
 @media screen and (min-width: 763px){
+  .app{
+    flex-direction: row;
+  }
   .pedra-sorteada{
     height: 250px;
     width: 250px;
   }
   
-  
+  .pedra-sorteada .circulo .numero{
+    font-size: 5.2rem;
+  }
 }
